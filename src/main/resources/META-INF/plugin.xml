@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>csense-idea.java-test-assistance</id>
+    <name>Csense - java test assistance</name>
+    <vendor email="csense@tvedesys.dk" url="https://github.com/csense-oss/idea-java-test-assistance">
+        Csense oss
+    </vendor>
+
+    <description><![CDATA[
+    A plugin that helps you with testing your code.(junit only at this time)<br/>
+    For example it provides:  <br/>
+    <ul>
+    <li> highlights functions that are missing tests</li>
+    <li> highlights classes that are not tested</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider
+                implementation="csense.idea.java.test.inspections.InspectionsProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+    <idea-version since-build="182"/>
+</idea-plugin>
